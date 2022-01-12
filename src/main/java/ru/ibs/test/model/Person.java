@@ -17,5 +17,7 @@ public class Person {
     @CreationTimestamp
     @Column(updatable = false)
     private LocalDate dateOfBirth;
+    @ManyToOne
+    @JoinColumn(name = "department_full_name_department")
     private Department department;
 }

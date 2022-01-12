@@ -23,7 +23,7 @@ public class PersonController {
         personService.add(person);
     }
 
-    @DeleteMapping("/delete")
+    @DeleteMapping("/delete{id}")
     public void delete(@PathVariable long id) {
         personService.delete(id);
     }

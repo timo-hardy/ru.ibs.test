@@ -47,4 +47,14 @@ public class PersonServiceImpl implements PersonService {
     public List<Person> findByOrderByDateOfBirthDesc() {
         return personRepository.findByOrderByDateOfBirthDesc();
     }
+
+    @Override
+    public List<Person> findByOrderByDepartmentAsc() {
+        return personRepository.findByOrderByDepartmentAsc();
+    }
+
+    @Override
+    public List<Person> findByOrderByDepartmentDesc() {
+        return personRepository.findByOrderByDepartmentDesc();
+    }
 }

@@ -17,4 +17,7 @@ public interface PersonRepository extends JpaRepository<Person, Long> {
 
     List<Person> findByOrderByDateOfBirthDesc();
 
+    List<Person> findByOrderByDepartmentAsc();
+
+    List<Person> findByOrderByDepartmentDesc();
 }

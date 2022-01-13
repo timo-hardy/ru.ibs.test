@@ -18,4 +18,8 @@ public interface PersonService {
     List<Person> findByOrderByDateOfBirthAsc();
 
     List<Person> findByOrderByDateOfBirthDesc();
+
+    List<Person> findByOrderByDepartmentAsc();
+
+    List<Person> findByOrderByDepartmentDesc();
 }

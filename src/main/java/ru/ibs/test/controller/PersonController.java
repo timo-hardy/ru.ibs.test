@@ -34,17 +34,27 @@ public class PersonController {
     }
 
     @GetMapping("/filterBySurnameDesc")
-    public List<Person> filterSurnameDesc() {
+    public List<Person> filterBySurnameDesc() {
         return personService.findByOrderBySurnameDesc();
     }
 
     @GetMapping("/filterByDateOfBirthAsc")
-    public List<Person> filterDateOfBirthAsc() {
+    public List<Person> filterByDateOfBirthAsc() {
         return personService.findByOrderByDateOfBirthAsc();
     }
 
     @GetMapping("/filterByDateOfBirthDesc")
-    public List<Person> filterDateOfBirthDesc() {
+    public List<Person> filterByDateOfBirthDesc() {
         return personService.findByOrderByDateOfBirthDesc();
+    }
+
+    @GetMapping("/filterByDepartmentAsc")
+    public List<Person> filterByDepartmentAsc() {
+        return personService.findByOrderByDepartmentAsc();
+    }
+
+    @GetMapping("/filterByDepartmentDesc")
+    public List<Person> filterByDepartmentDesc() {
+        return personService.findByOrderByDepartmentDesc();
     }
 }

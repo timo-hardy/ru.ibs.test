@@ -15,4 +15,7 @@ public interface PersonService {
 
     List<Person> findByOrderBySurnameDesc();
 
+    List<Person> findByOrderByDateOfBirthAsc();
+
+    List<Person> findByOrderByDateOfBirthDesc();
 }

@@ -21,8 +21,6 @@ public class Person {
     private String surname;
     private String name;
     private String patronymic;
-    @CreationTimestamp
-    @Column(updatable = false)
     private LocalDate dateOfBirth;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "department_full_name_department")

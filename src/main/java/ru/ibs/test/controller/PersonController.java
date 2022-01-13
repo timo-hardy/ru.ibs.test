@@ -18,16 +18,6 @@ public class PersonController {
         return personService.findAll();
     }
 
-    @GetMapping("/filterBySurnameAsc")
-    public List<Person> filterSurnameAsc() {
-        return personService.findByOrderBySurnameAsc();
-    }
-
-    @GetMapping("/filterBySurnameDesk")
-    public List<Person> filterSurnameDesc() {
-        return personService.findByOrderBySurnameDesc();
-    }
-
     @RequestMapping("/create")
     public void create(@RequestBody Person person) {
         personService.add(person);
@@ -36,5 +26,25 @@ public class PersonController {
     @DeleteMapping("/delete{id}")
     public void delete(@PathVariable long id) {
         personService.delete(id);
+    }
+
+    @GetMapping("/filterBySurnameAsc")
+    public List<Person> filterSurnameAsc() {
+        return personService.findByOrderBySurnameAsc();
+    }
+
+    @GetMapping("/filterBySurnameDesc")
+    public List<Person> filterSurnameDesc() {
+        return personService.findByOrderBySurnameDesc();
+    }
+
+    @GetMapping("/filterByDateOfBirthAsc")
+    public List<Person> filterDateOfBirthAsc() {
+        return personService.findByOrderByDateOfBirthAsc();
+    }
+
+    @GetMapping("/filterByDateOfBirthDesc")
+    public List<Person> filterDateOfBirthDesc() {
+        return personService.findByOrderByDateOfBirthDesc();
     }
 }

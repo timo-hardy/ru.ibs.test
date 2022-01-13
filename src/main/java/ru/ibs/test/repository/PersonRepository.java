@@ -10,5 +10,11 @@ import java.util.List;
 @Repository
 public interface PersonRepository extends JpaRepository<Person, Long> {
     List<Person> findByOrderBySurnameAsc();
+
     List<Person> findByOrderBySurnameDesc();
+
+    List<Person> findByOrderByDateOfBirthAsc();
+
+    List<Person> findByOrderByDateOfBirthDesc();
+
 }

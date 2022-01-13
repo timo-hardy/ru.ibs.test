@@ -10,4 +10,9 @@ public interface PersonService {
     void add(Person person);
 
     void delete(long id);
+
+    List<Person> findByOrderBySurnameAsc();
+
+    List<Person> findByOrderBySurnameDesc();
+
 }
